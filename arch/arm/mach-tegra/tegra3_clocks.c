@@ -307,7 +307,7 @@
 #define ROUND_DIVIDER_DOWN	1
 
 /* PLLP default fixed rate in h/w controlled mode */
-#define PLLP_DEFAULT_FIXED_RATE		216000000
+#define PLLP_DEFAULT_FIXED_RATE		408000000
 
 /* Threshold to engage CPU clock skipper during CPU rate change */
 #define SKIPPER_ENGAGE_RATE		 800000000
@@ -3983,7 +3983,7 @@ static struct clk tegra_clk_sclk = {
 	.reg	= 0x28,
 	.ops	= &tegra_super_ops,
 	.max_rate = 378000000,
-	.min_rate = 12000000,
+	.min_rate = 40000000,
 };
 
 static struct clk tegra_clk_virtual_cpu_g = {
@@ -4038,7 +4038,7 @@ static struct clk tegra_clk_hclk = {
 	.reg_shift	= 4,
 	.ops		= &tegra_bus_ops,
 	.max_rate       = 378000000,
-	.min_rate       = 12000000,
+	.min_rate       = 40000000,
 };
 
 static struct clk tegra_clk_pclk = {
@@ -4049,7 +4049,7 @@ static struct clk tegra_clk_pclk = {
 	.reg_shift	= 0,
 	.ops		= &tegra_bus_ops,
 	.max_rate       = 167000000,
-	.min_rate       = 12000000,
+	.min_rate       = 40000000,
 };
 
 static struct raw_notifier_head sbus_rate_change_nh;
